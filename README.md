@@ -7,4 +7,6 @@ Spring boot microservices with:
 - SAGA transaction handling model
 - CQRS
 - Kafka
+- Docker
+- Jenkins Pipeline
 - Kubernetes
