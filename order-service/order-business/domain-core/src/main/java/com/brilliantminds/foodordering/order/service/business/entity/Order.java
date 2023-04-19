@@ -225,5 +225,9 @@ public class Order extends AggregateRoot<OrderId> {
             failureMessages = val;
             return this;
         }
+
+        public Order build() {
+            return new Order(this);
+        }
     }
 }
