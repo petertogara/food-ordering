@@ -1,8 +1,6 @@
 package com.brilliantminds.foodordering.order.service.business;
 
-import com.brilliantminds.foodordering.order.service.business.OrderDomainService;
 import com.brilliantminds.foodordering.order.service.business.dto.create.CreateOrderCommand;
-import com.brilliantminds.foodordering.order.service.business.dto.create.CreateOrderResponse;
 import com.brilliantminds.foodordering.order.service.business.entity.Customer;
 import com.brilliantminds.foodordering.order.service.business.entity.Order;
 import com.brilliantminds.foodordering.order.service.business.entity.Restaurant;
@@ -56,8 +54,8 @@ public class OrderCreateHelper {
         Restaurant restaurant = orderDataMapper.createOrderCommandToRestaurant(createOrderCommand);
         Optional<Restaurant> optionalRestaurant = restaurantRepository.findRestaurantInformation(restaurant);
         if (optionalRestaurant.isEmpty()) {
-            log.warn("Could not find the restaurant with id ; {}", createOrderCommand.getRestaurantId());
-            throw new OrderDomainException("Could not find the restaurant with id ; {}" + createOrderCommand.getRestaurantId());
+            log.warn("Could not find the restaurant with id : {}", createOrderCommand.getRestaurantId());
+            throw new OrderDomainException("Could not find the restaurant with id : " + createOrderCommand.getRestaurantId());
         }
         return optionalRestaurant.get();
     }
@@ -65,8 +63,8 @@ public class OrderCreateHelper {
     private void checkCustomer(UUID customerId) {
         Optional<Customer> customer = customerRepository.findCustomer(customerId);
         if (customer.isEmpty()) {
-            log.warn("Could not find the customer with id ; {}", customerId);
-            throw new OrderDomainException("Could not find the customer with id ; {}" + customerId);
+            log.warn("Could not find the customer with id : {}", customerId);
+            throw new OrderDomainException("Could not find the customer with id : " + customerId);
         }
     }
 

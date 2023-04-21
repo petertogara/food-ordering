@@ -1,7 +1,7 @@
 package com.brilliantminds.foodordering.order.service.business.dto.track;
 
 import com.brilliantminds.foodordering.domain.valueobject.OrderStatus;
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

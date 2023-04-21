@@ -7,7 +7,6 @@ import com.brilliantminds.foodordering.order.service.business.event.OrderCancell
 import com.brilliantminds.foodordering.order.service.business.event.OrderCreatedEvent;
 import com.brilliantminds.foodordering.order.service.business.event.OrderPaidEvent;
 import com.brilliantminds.foodordering.order.service.business.exception.OrderDomainException;
-import lombok.extern.slf4j.Slf4j;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -15,7 +14,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Slf4j
+
 public class OrderDomainServiceImpl implements OrderDomainService {
 
     private final static String UTC = "UTC";

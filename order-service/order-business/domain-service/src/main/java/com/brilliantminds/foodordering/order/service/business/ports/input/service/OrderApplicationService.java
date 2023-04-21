@@ -4,7 +4,7 @@ import com.brilliantminds.foodordering.order.service.business.dto.create.CreateO
 import com.brilliantminds.foodordering.order.service.business.dto.create.CreateOrderResponse;
 import com.brilliantminds.foodordering.order.service.business.dto.track.TrackOrderQuery;
 import com.brilliantminds.foodordering.order.service.business.dto.track.TrackOrderResponse;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 public interface OrderApplicationService {
 
