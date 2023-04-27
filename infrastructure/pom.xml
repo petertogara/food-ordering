@@ -10,7 +10,10 @@
 
 <artifactId>infrastructure</artifactId>
 <packaging>pom</packaging>
+    <modules>
+        <module>kafka</module>
+    </modules>
 
-<properties>
+    <properties>
 </properties>
 </project>
